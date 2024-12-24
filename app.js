@@ -3,6 +3,8 @@ let resetbtn = document.querySelector("#reset-btn")
 let newgamebtn = document.querySelector("#new-btn")
 let msgcontainer = document.querySelector(".msg-container")
 let msg = document.querySelector("#msg")
+let msg1 = document.querySelector("#msg1");
+let msg2 = document.querySelector("#msg2");
 
 let turnO = true;      //player O, player X turn will show their symbol
 
@@ -57,7 +59,9 @@ const enableboxes = () => {   //function to make sure game starts next round.
 }
 
 const showWinner = (winner) => {                                   //function to show winner
-    msg.innerText = `Congratulations, Player ${winner} won!`       // showing winner
+    msg.innerText = `Congratulations, Player ${winner} won!`       //showing winner
+    msg1.innerText = `Thanks for Playing!`;                        //showing thank you message
+    msg2.innerText = `This Project is made by Dhruv Raghav!`;      //showing authors name!
     msgcontainer.classList.remove("hide")                          //removing hide from class list, means the class will show now
     disableboxes()
 }
